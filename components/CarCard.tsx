@@ -50,7 +50,7 @@ const CarCard = ({ car }: CarCardProps) => {
                     </div>
                     <div className='flex flex-col justify-center items-center gap-2'>
                         <Image src="/gas.svg" width={20} height={20} alt='gas' />
-                        <p className='text-[14px]'>{Math.ceil(city_mpg * 1.6)}Km/liter</p>
+                        <p className='text-[14px]'>{Math.floor((city_mpg *  0.42) )} km/l </p>
                     </div>
                 </div>
 

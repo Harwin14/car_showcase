@@ -1,9 +1,10 @@
 
 import { fetchCars } from "@/utils";
-import { CarCard, CustomFilter, Hero, SearchBar, ShowMore } from "./components";
+import { CarCard, CustomFilter, Hero, SearchBar, ShowMore } from "../components";
 import { fuels, yearsOfProduction } from "@/constants.ts";
+import { HomeProps } from "@/types";
 
-export default async function Home({ searchParams }) {
+export default async function Home({ searchParams }:HomeProps) {
     const allCars = await fetchCars({
         manufacturer: searchParams.manufacturer || '',
         year: searchParams.year || 2022,
